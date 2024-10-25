@@ -14,6 +14,8 @@ import ScrollTop from "./components/scrollTop/ScrollTop"
  import Login from "./pages/registration/Login";
  import UserDashboard from "./pages/user/UserDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AddProductPage from "./pages/admin/AddProductPage";
+import UpdateProductPage from "./components/admin/UpdateProductPage";
 
 
 
@@ -35,6 +37,8 @@ const App=() => {
           <Route path="/login" element={<Login />} />
           <Route path="/user-dashboard" element={<UserDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/addproduct" element={<AddProductPage />} />
+          <Route path="/updateproduct" element={<UpdateProductPage />} />
         </Routes>
       </Router>
     </div>
