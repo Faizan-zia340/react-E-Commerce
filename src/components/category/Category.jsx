@@ -1,72 +1,73 @@
-// category 
+// // src/components/CategoryCards.jsx
+import React from 'react';
+
 const category = [
     {
+        id: 1,
         image: 'https://cdn-icons-png.flaticon.com/256/4359/4359963.png',
         name: 'fashion'
     },
     {
+        id: 2,
         image: 'https://cdn-icons-png.flaticon.com/256/11833/11833323.png',
         name: 'shirt'
     },
     {
+        id: 3,
         image: 'https://cdn-icons-png.flaticon.com/256/8174/8174424.png',
         name: 'jacket'
     },
     {
+        id: 4,
         image: 'https://cdn-icons-png.flaticon.com/256/7648/7648246.png',
         name: 'mobile'
     },
     {
+        id: 5,
         image: 'https://cdn-icons-png.flaticon.com/256/12142/12142416.png',
         name: 'laptop'
     },
     {
+        id: 6,
         image: 'https://cdn-icons-png.flaticon.com/256/10686/10686553.png',
         name: 'shoes'
     },
     {
+        id: 7,
         image: 'https://cdn-icons-png.flaticon.com/256/12114/12114279.png',
         name: 'home'
     },
     {
+        id: 8,
         image: 'https://cdn-icons-png.flaticon.com/256/11946/11946316.png',
         name: 'books'
     }
-]
+];
 
-const Category = () => {
+const CategoryCards = () => {
     return (
-        <div>
-            <div className="flex flex-col mt-5">
-                {/* main 1 */}
-                <div className="flex overflow-x-scroll lg:justify-center  hide-scroll-bar">
-                    {/* main 2  */}
-                    <div className="flex ">
-                        {/* category  */}
-                        {category.map((item, index) => {
-                            return (
-                                <div key={index} className="px-3 lg:px-10">
-                                    {/* Image  */}
-                                    <div className=" w-16 h-16 lg:w-24 lg:h-24 max-w-xs rounded-full  bg-violet-300 transition-all hover:bg-violet-400 cursor-pointer mb-1 " >
-                                        <div className="flex justify-center mb-12">
-                                            {/* Image tag  */}
-                                            <img src={item.image} alt="img" />
-                                        </div>
-                                    </div>
-
-                                    {/* Name Text  */}
-                                    <h1 className=' text-sm lg:text-lg text-center font-medium title-font first-letter:uppercase '>{item.name}</h1>
-                                </div>
-                            )
-                        })}
+        <div className='w-11/12 mx-20 border border-gray-400 rounded-md my-4 h-56'>
+        <div className=" flex my-7  grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-10 px-12">
+            {category.map((item) => (
+                <div 
+                    key={item.id} 
+                    className=" w-60 bg-white shadow-sm rounded-md overflow-hidden border border-gray-200"
+                >
+                    <img 
+                        src={item.image} 
+                        alt={item.name} 
+                        className="w-full h-24 object-contain p-2"
+                    />
+                    <div className="p-2">
+                        <h3 className="text-center text-sm font-medium text-gray-700">
+                            {item.name}
+                        </h3>
                     </div>
                 </div>
-            </div>
-
-            {/* style  */}
-            <style dangerouslySetInnerHTML={{ __html: ".hide-scroll-bar {  -ms-overflow-style: none;  scrollbar-width: none;}.hide-scroll-bar::-webkit-scrollbar {  display: none;}" }} />
+            ))}
+        </div>
         </div>
     );
-}
+};
 
-export default Category;
+export default CategoryCards;

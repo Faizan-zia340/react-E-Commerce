@@ -7,17 +7,17 @@ import {
 import HomePage from "./pages/home/HomePage";
 import NoPage from "./pages/noPage/NoPage";
 import ProductInfo from "./components/productInfo/ProductInfo";
-import ScrollTop from "./components/scrollTop/ScrollTop"
+// import ScrollTop from "./components/scrollTop/ScrollTop"
  import CartPage from "./components/cart/CartPage";
  import AllProduct from "./pages/allproduct/AllProduct";
- import Signup from "./pages/registration/Signup";
- import Login from "./pages/registration/Login";
  import UserDashboard from "./pages/user/UserDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AddProductPage from "./pages/admin/AddProductPage";
 import UpdateProductPage from "./components/admin/UpdateProductPage";
-
-
+import MyState from "../src/context/myState"
+import { Toaster } from "react-hot-toast";
+import Signup from "./pages/registration/Signup";
+import Login from "./pages/registration/Login";
 
 
 
@@ -25,7 +25,7 @@ import UpdateProductPage from "./components/admin/UpdateProductPage";
 
 const App=() => {
   return(
-    <div>
+    <MyState>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage/> }/> 
@@ -39,9 +39,11 @@ const App=() => {
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/addproduct" element={<AddProductPage />} />
           <Route path="/updateproduct" element={<UpdateProductPage />} />
+
         </Routes>
+           <Toaster/>
       </Router>
-    </div>
+    </MyState>
 
   )
 }

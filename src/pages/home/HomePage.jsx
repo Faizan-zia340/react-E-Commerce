@@ -4,9 +4,12 @@ import Category from "../../components/category/Category";
 import HomePageProductCard from "../../components/homePageProductCard/HomePageProductCard";
 import Track from "../../components/track/Track";
 import Testimonial from "../../components/testimonial/Testimonial";
-import Footer from "../../components/footer/Footer";
+import Loader from "../../components/loader/Loader";
+
+
 
 const HomePage = () => {
+  
     return(
         <Layout>
             <Herosection/>
@@ -14,7 +17,7 @@ const HomePage = () => {
             <HomePageProductCard/>
            <Track/>
            <Testimonial/>
-           
+         <Loader/>
             </Layout>
 
     );

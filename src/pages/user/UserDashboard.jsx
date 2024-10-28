@@ -27,7 +27,7 @@ const UserDashboard = () => {
                         </div>
                         {/* text  */}
                         <div className="">
-                            <h1 className=" text-center text-lg"><span className=" font-bold">Name :</span> Kamal Nayan Upadhyay</h1>
+                            <h1 className=" text-center text-lg"><span className=" font-bold">Name :</span>Mr.Sheikh</h1>
                             <h1 className=" text-center text-lg"><span className=" font-bold">Email :</span> test@gmail.com</h1>
                         </div>
                     </div>
